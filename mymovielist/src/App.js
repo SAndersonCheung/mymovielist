@@ -1,22 +1,22 @@
 import Movie from "./components/Movie";
-import "./styles/App.module.scss";
+import styles from "./styles/App.module.scss";
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-Header">
+    <div className={styles.App}>
+      <div className={styles.App_Header}>
         <h1>MyMovieList</h1>
       </div>
-      <div className="App-New">
-        <h2>Add New Movie</h2>
+      <div className={styles.App_New}>
+        <p>Add New Movie</p>
       </div>
-      <div className="App-Filters">
+      <div className={styles.App_Filters}>
         <p>All</p>
         <p>To Watch</p>
         <p>Seen</p>
         <p>Dropped</p>
       </div>
-      <div className="App-Movies">
+      <div className={styles.App_Movies}>
         <Movie />
       </div>
     </div>

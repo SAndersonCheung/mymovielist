@@ -1,0 +1,26 @@
+@import "../_globals.scss";
+
+.Movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  max-width: calc(100% - $space2);
+  padding: $space1;
+  .Movie_Title {
+    font-size: 2rem;
+  }
+  .Movie_Img {
+  }
+  .Movie_Status {
+  }
+}
+#to-watch {
+  border: $space025 solid $accent_bright;
+}
+#seen {
+  border: $space025 solid $accent_med;
+}
+#dropped {
+  border: $space025 solid $accent_dark;
+}
