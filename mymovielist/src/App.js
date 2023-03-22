@@ -1,13 +1,13 @@
-import logo from "./images/logo.svg";
-import "./styles/App.css";
-import * as dotenv from "dotenv";
-dotenv.config();
+import "./styles/App.module.scss";
 
 function App() {
   return (
     <div className="App">
       <div className="App-Header">
         <h1>MyMovieList</h1>
+      </div>
+      <div className="App-New">
+        <h2>Add New Movie</h2>
       </div>
       <div className="App-Filters">
         <p>All</p>
