@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
+
+// Colour Scheme
+
+$white: #fff;
+$offwhite: #f2f2f2;
+
+$grey: #bebebe;
+$darkgrey: #a7a7a7;
+
+$accent_bright: #f25757;
+$accent_med: #d93250;
+$accent_dark: #732743;
+
+$black: #000;
+$offblack: #030f26;
+
+// Spacing
+
+$space025: 4px;
+$space05: 8px;
+$space1: 16px;
+$space15: 24px;
+$space2: 32px;
+
+// Fonts
+
+* {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  body {
+    margin: unset;
+    background-color: $offwhite;
+    text-align: center;
+  }
+}
