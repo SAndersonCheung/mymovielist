@@ -1,3 +1,4 @@
+import Movie from "./components/Movie";
 import "./styles/App.module.scss";
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         <p>To Watch</p>
         <p>Seen</p>
         <p>Dropped</p>
+      </div>
+      <div className="App-Movies">
+        <Movie />
       </div>
     </div>
   );
