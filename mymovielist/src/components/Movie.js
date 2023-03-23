@@ -9,7 +9,7 @@ const movie = {
   status: "To Watch",
 };
 
-export default function Movie() {
+const Movie = () => {
   const [selection, setSelection] = useState("to-watch");
   return (
     <div className={styles.Movie} id={styles[selection]}>
@@ -23,7 +23,7 @@ export default function Movie() {
         <option value="seen">Seen</option>
         <option value="dropped">Dropped</option>
       </select>
-      <div>
+      <div className={styles.Movie_Info}>
         {"Released " + movie.year} | {"Rated " + movie.rating}{" "}
       </div>
       <img
@@ -33,4 +33,5 @@ export default function Movie() {
       />
     </div>
   );
-}
+};
+export default Movie;

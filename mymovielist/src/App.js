@@ -1,4 +1,4 @@
-import Movie from "./components/Movie";
+import MovieList from "./components/MovieList";
 import styles from "./styles/App.module.scss";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <p>Dropped</p>
       </div>
       <div className={styles.App_Movies}>
-        <Movie />
+        <MovieList />
       </div>
     </div>
   );

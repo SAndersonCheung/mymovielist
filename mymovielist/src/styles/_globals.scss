@@ -27,9 +27,10 @@ $space2: 32px;
 
 * {
   font-family: "Atkinson Hyperlegible", sans-serif;
-  body {
-    margin: unset;
-    background-color: $offwhite;
-    text-align: center;
-  }
+}
+
+body {
+  margin: unset;
+  background-color: $offwhite;
+  text-align: center;
 }

@@ -1,4 +1,8 @@
 @import "_globals.scss";
 .App {
   text-align: center;
+  .App_Movies {
+    display: flex;
+    justify-content: center;
+  }
 }
