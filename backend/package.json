@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Summer",
+  "license": "MIT",
+  "start:backend": {
+    "node server.js": []
+  },
+  "dependencies": {
+    "@types/node": "^18.15.5",
+    "mongodb": "^5.1.0",
+    "mongoose": "^7.0.3"
+  },
+  "type": "module"
+}
