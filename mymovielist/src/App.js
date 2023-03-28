@@ -1,4 +1,5 @@
 import MovieList from "./components/MovieList";
+import AddMovie from "./components/AddMovie";
 import styles from "./styles/App.module.scss";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
         <h1>MyMovieList</h1>
       </div>
       <div className={styles.App_New}>
-        <p>Add New Movie</p>
+        <AddMovie />
       </div>
       <div className={styles.App_Filters}>
         <p>All</p>

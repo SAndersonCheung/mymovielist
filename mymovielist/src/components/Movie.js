@@ -1,19 +1,11 @@
 import { useState } from "react";
 import styles from "../styles/components/Movie.module.scss";
 
-const movie = {
-  name: "The Whale",
-  year: "2022",
-  rating: "92%",
-  imgUrl: "https://upload.wikimedia.org/wikipedia/en/f/f3/TheWhalePoster.jpg",
-  status: "To Watch",
-};
-
-const Movie = () => {
+const Movie = ({ name, year, rating, imgUrl, status }) => {
   const [selection, setSelection] = useState("to-watch");
   return (
     <div className={styles.Movie} id={styles[selection]}>
-      <div className={styles.Movie_Title}>{movie.name}</div>
+      <div className={styles.Movie_Title}>{name}</div>
       <select
         onChange={(event) => setSelection(event.target.value)}
         defaultValue={selection}
@@ -24,12 +16,12 @@ const Movie = () => {
         <option value="dropped">Dropped</option>
       </select>
       <div className={styles.Movie_Info}>
-        {"Released " + movie.year} | {"Rated " + movie.rating}{" "}
+        {"Released " + year} | {"Rated " + rating}{" "}
       </div>
       <img
         className={styles.Movie_Img}
-        src={movie.imgUrl}
-        alt={"Poster for " + movie.name}
+        src={imgUrl}
+        alt={"Poster for " + name}
       />
     </div>
   );
