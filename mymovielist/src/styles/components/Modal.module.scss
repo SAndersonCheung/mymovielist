@@ -1,7 +1,7 @@
 @import "../_globals.scss";
 
 .Modal {
-  width: 800px;
+  width: 40%;
   background-color: $white;
   text-align: center;
   padding: $space2;
@@ -17,12 +17,35 @@
 
   -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
-  .title {
-    h2 {
-      margin: unset;
-    }
+  .Modal_Topbar {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
     input {
-      width: 400px;
+      width: 80%;
     }
+    button {
+      border: none;
+      background-color: $white;
+      font-size: 2rem;
+    }
+    button:hover {
+      cursor: pointer;
+      color: $darkgrey;
+    }
+  }
+  .Search_List {
+    margin: $space2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    width: calc(100% - ($space2 * 2));
+    gap: $space2;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .Modal {
+    width: 100%;
   }
 }

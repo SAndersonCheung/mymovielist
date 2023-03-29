@@ -9,7 +9,7 @@ const Movie = ({ name, year, rating, imgUrl, status }) => {
       <select
         onChange={(event) => setSelection(event.target.value)}
         defaultValue={selection}
-        className={styles.Movie_Status}
+        className={styles.Movie_Button}
       >
         <option value="to-watch">To Watch</option>
         <option value="seen">Seen</option>

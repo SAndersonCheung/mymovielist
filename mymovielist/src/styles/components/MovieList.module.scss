@@ -1,6 +1,6 @@
 @import "../_globals.scss";
 
-.MovieList {
+.Movie_List {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   width: calc(100% - ($space2 * 2));

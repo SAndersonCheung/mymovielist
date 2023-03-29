@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   max-width: 320px;
   width: calc(100vw - (($space2 + $space1 + $space025) * 2));
   padding: $space1;
   background-color: $white;
   .Movie_Title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .Movie_Img {
   }
@@ -20,7 +21,7 @@
   .Movie_Title,
   .Movie_Img,
   .Movie_Info,
-  .Movie_Status {
+  .Movie_Button {
     margin-bottom: $space1;
   }
 }
@@ -32,6 +33,9 @@
 }
 #dropped {
   border: $space025 solid $accent_dark;
+}
+#Movie_Result {
+  border: $space025 solid $accent_med;
 }
 
 @media screen and (min-width: 430px) {
