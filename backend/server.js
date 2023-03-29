@@ -1,7 +1,14 @@
 import mongoose from "mongoose";
 import Express from "express";
+import routes from "./routes/routes.js";
 const app = Express();
 const port = 3000;
+
+app.use(Express.json());
+
+app.listen(27017, () => {
+  console.log(`Server Started at ${27017}`);
+});
 
 var movies = [
   { name: "express", url: "https://github.com/expressjs/express" },
@@ -9,7 +16,7 @@ var movies = [
   { name: "cluster", url: "https://github.com/learnboost/cluster" },
 ];
 
-// example: http://localhost:3000/api/repos/?api-key=foo
+// example: http://localhost:27017/api/repos/?api-key=foo
 app.get("/api/movies", function (req, res) {
   res.send(movies);
 });
@@ -22,16 +29,6 @@ app.delete("/user", (req, res) => {
   res.send("Got a DELETE request at /user");
 });
 
-export const movieSchema = new mongoose.Schema({
-  movieName: String,
-  movieRating: Number,
-  movieYear: Number,
-  movieImg: String,
-  movieStatus: String,
-});
-
-export const Movie = new mongoose.model("Movie", movieSchema);
-
 const testMovie = new Movie({
   movieName: "The Whale",
   movieRating: 8.045,
@@ -42,6 +39,16 @@ const testMovie = new Movie({
 
 const main = async () => {
   await mongoose.connect("mongodb://127.0.0.1:27017/mylist");
+  const database = mongoose.connection;
+  database.on("error", (error) => {
+    console.log(error);
+  });
+
+  database.once("connected", () => {
+    console.log("Database Connected");
+  });
+
+  app.use("/api", routes);
   // testMovie.save();
   // await Movie.deleteMany({}, console.log("done"));
   Movie.find({}).then((res) => console.log(res));
@@ -57,7 +64,6 @@ main();
 // pp.set("json spaces", 2);
 // app.get("/", (req, res) => {
 //   res.json({
-//     Welcome: `Welcome user ${req.ip}`,
 //     Endpoints: {
 //       "/new_movie": {
 //         params: [
@@ -122,4 +128,7 @@ main();
 
 // app.delete("/remove_movie", (req, res) => {
 //   res.send("Got a DELETE request at /user");
+// how to delete from a mongodb collection
+// const deleteResult = await collection.deleteMany({ a: 3 });
+// console.log('Deleted documents =>', deleteResult);
 // });
