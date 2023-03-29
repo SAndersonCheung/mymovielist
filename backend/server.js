@@ -3,12 +3,52 @@ import Express from "express";
 import { Movie } from "./models/movie.js";
 // import routes from "./routes/routes.js";
 const app = Express();
-const port = 27017;
+const port = 5500;
 
 app.use(Express.json());
 
-app.listen(27017, () => {
-  console.log(`Server Started at ${27017}`);
+app.listen(port, () => {
+  console.log(`Server Started at ${port}`);
+});
+
+app.set("json spaces", 2);
+app.get("/", (req, res) => {
+  res.json({
+    Endpoints: {
+      "/new_movie": {
+        params: [
+          { movieName: { description: "Movie Title.", type: "[string]" } },
+          {
+            movieRating: {
+              description: "Rating of the Movie out of 10",
+              type: "[number]",
+            },
+          },
+          {
+            movieYear: {
+              description: "Year of Movie Release.",
+              type: "[number]",
+            },
+          },
+          {
+            movieImg: {
+              description: "A poster for the movie.",
+              type: "[string]",
+            },
+          },
+          {
+            movieStatus: {
+              description: "User's relationship towards the movie.",
+              type: "[string]",
+            },
+          },
+        ],
+      },
+      "/movies": {
+        params: [{}],
+      },
+    },
+  });
 });
 
 const testMovie = new Movie({
