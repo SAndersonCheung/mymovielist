@@ -3,7 +3,7 @@ import Express from "express";
 import { Movie } from "./models/movie.js";
 // import routes from "./routes/routes.js";
 const app = Express();
-const port = 3000;
+const port = 27017;
 
 app.use(Express.json());
 
@@ -31,8 +31,8 @@ const main = async () => {
   });
 
   // app.use("/api", routes);
-  testMovie.save();
-  // await Movie.deleteMany({}, console.log("done"));
+  //testMovie.save();
+  //await Movie.deleteMany({}, console.log("done"));
   Movie.find({}).then((res) => console.log(res));
 };
 

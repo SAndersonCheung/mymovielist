@@ -1,0 +1,10 @@
+@import "../_globals.scss";
+
+#selected {
+  a {
+    color: $white;
+  }
+  background-color: $accent_med;
+  border: 1px solid $accent_med;
+  border-radius: $space2;
+}

@@ -1,6 +1,7 @@
 import MovieList from "./components/MovieList";
 import AddMovie from "./components/AddMovie";
 import styles from "./styles/App.module.scss";
+import MovieFilters from "./components/MovieFilters";
 
 function App() {
   return (
@@ -12,10 +13,7 @@ function App() {
         <AddMovie />
       </div>
       <div className={styles.App_Filters}>
-        <p>All</p>
-        <p>To Watch</p>
-        <p>Seen</p>
-        <p>Dropped</p>
+        <MovieFilters />
       </div>
       <div className={styles.App_Movies}>
         <MovieList />

@@ -5,6 +5,9 @@
     display: flex;
     justify-content: center;
   }
+  .App_Filters {
+    margin: $space1;
+  }
   input {
     background-color: $white;
     border: 1px solid $darkgrey;

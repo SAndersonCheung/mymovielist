@@ -1,0 +1,22 @@
+@import "../_globals.scss";
+
+.Filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .Filter_Wrap {
+    border: 1px solid $accent_med;
+    border-radius: $space2;
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    p {
+      margin: unset;
+      padding: $space05 $space1;
+    }
+    .Filter_Link {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}
