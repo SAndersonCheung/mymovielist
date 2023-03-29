@@ -1,3 +1,4 @@
+import { useNewMovie } from "../hooks/useNewMovie";
 import styles from "../styles/components/Movie.module.scss";
 
 const Movie = ({ name, year, rating, imgUrl }) => {
@@ -9,12 +10,16 @@ const Movie = ({ name, year, rating, imgUrl }) => {
     //   movieImg: { name },
     //   movieStatus: "To Watch",
     // });
-    // Server.js stuff
+    // useNewMovie(toAddMovie);
   }
   return (
     <div className={styles.Movie} id={styles.Movie_Result}>
       <div className={styles.Movie_Title}>{name}</div>
-      <button type="button" onClick={addToList} className={styles.Movie_Button}>
+      <button
+        type="button"
+        onClick={addToList(name, year, rating, imgUrl)}
+        className={styles.Movie_Button}
+      >
         Add to List
       </button>
       <div className={styles.Movie_Info}>
