@@ -3,6 +3,9 @@ import styles from "../styles/components/Movie.module.scss";
 
 const Movie = ({ name, year, rating, imgUrl, status }) => {
   const [selection, setSelection] = useState("to-watch");
+  function removeMovie() {
+    return 0;
+  }
   return (
     <div className={styles.Movie} id={styles[selection]}>
       <div className={styles.Movie_Title}>{name}</div>
@@ -23,6 +26,14 @@ const Movie = ({ name, year, rating, imgUrl, status }) => {
         src={imgUrl}
         alt={"Poster for " + name}
       />
+      <button
+        className={styles.Movie_Remove}
+        onClick={() => {
+          removeMovie();
+        }}
+      >
+        Remove from List
+      </button>
     </div>
   );
 };
