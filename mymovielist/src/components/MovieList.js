@@ -1,5 +1,6 @@
 import styles from "../styles/components/MovieList.module.scss";
 import Movie from "./Movie";
+// import { useGetMovies } from "../hooks/useGetMovies";
 const MovieList = () => {
   return (
     <div className={styles.Movie_List}>

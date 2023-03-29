@@ -5,7 +5,7 @@ module.exports = router;
 const jsonParser = bodyParser.json();
 
 //Post Method
-router.post("/new_movie", jsonParser, async (req, res) => {
+newMovie = async (req, res) => {
   const movie = req.body.movie;
 
   const MovieInstance = new Movie();
@@ -24,10 +24,10 @@ router.post("/new_movie", jsonParser, async (req, res) => {
       console.log(error);
       res.json({ success: false, error: error });
     });
-});
+};
 
 //Get all Method
-router.get("/getAll", async (req, res) => {
+getAll = async (req, res) => {
   await Movie.find()
     .then(() => {
       res.json({ success: true, error: undefined });
@@ -36,7 +36,7 @@ router.get("/getAll", async (req, res) => {
       console.log(error);
       res.json({ success: false, error: error });
     });
-});
+};
 
 //Delete by ID Method
 router.delete("/delete/:id", (req, res) => {

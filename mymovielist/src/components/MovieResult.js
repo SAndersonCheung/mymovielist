@@ -1,4 +1,4 @@
-import { useNewMovie } from "../hooks/useNewMovie";
+// import { useNewMovie } from "../hooks/useNewMovie";
 import styles from "../styles/components/Movie.module.scss";
 
 const Movie = ({ name, year, rating, imgUrl }) => {

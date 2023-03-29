@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import Express from "express";
 import { Movie } from "./models/movie.js";
-// import routes from "./routes/routes.js";
+import { getAll } from "./routes/routes.js";
 const app = Express();
 const port = 5500;
 
@@ -50,6 +50,10 @@ app.get("/", (req, res) => {
     },
   });
 });
+
+app.set("/new_movie", (req, res) => newMovie(req, res));
+
+app.get("/movies", (req, res) => getAll(req, res));
 
 const testMovie = new Movie({
   movieName: "The Avengers",
