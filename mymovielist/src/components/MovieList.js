@@ -4,6 +4,11 @@ const MovieList = () => {
   return (
     <div className={styles.Movie_List}>
       <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
     </div>
   );
 };
